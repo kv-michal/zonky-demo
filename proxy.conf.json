@@ -1,0 +1,9 @@
+{
+  "/loans": {
+    "target": "https://api.zonky.cz",
+    "secure": true,
+    "pathRewrite": {
+    },
+    "changeOrigin": true
+  }
+}
