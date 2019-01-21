@@ -1,0 +1,17 @@
+<div class="title">
+  Please select rating
+</div>
+<div class="ratings-container">
+  <div *ngFor="let rating of ratings" (click)="toggleRating(rating)"
+       [ngClass]="{'ratings-container__rating--active': rating.isActive}"
+       class="ratings-container__rating">
+    {{rating.name}}
+  </div>
+</div>
+<div class="amount">
+  <div *ngIf="loading" class="loading"></div>
+
+  <ng-container *ngIf="!loading && loans">
+    {{ loans | averageAmount }}
+  </ng-container>
+</div>

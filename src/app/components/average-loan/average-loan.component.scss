@@ -1,0 +1,81 @@
+:host {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #e06e55;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  overflow: hidden;
+}
+
+.title, .amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #e06e55;
+}
+
+.ratings-container {
+  display: flex;
+  margin: 0 2px;
+
+  &__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 25px;
+    padding: 4px;
+    margin: 4px 2px;
+    font-weight: 600;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    transition: background-color 0.1s linear, color 0.1s linear;
+
+    &:hover {
+      color: #fff;
+      background: fade_out(#E75637, 0.5);
+    }
+
+    &--active {
+      color: #fff;
+      background: #E75637;
+    }
+  }
+}
+
+/*
+* LOADING SPINNER
+*/
+
+.loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
