@@ -1,6 +1,4 @@
-<div class="title">
-  Please select rating
-</div>
+<div class="title">Please select rating</div>
 <div class="ratings-container">
   <div *ngFor="let rating of ratings" (click)="toggleRating(rating)"
        [ngClass]="{'ratings-container__rating--active': rating.isActive}"

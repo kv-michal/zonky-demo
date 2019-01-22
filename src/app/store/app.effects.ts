@@ -4,6 +4,8 @@ import { Actions, Effect, ofType } from "@ngrx/effects";
 import { select, Store } from "@ngrx/store";
 import { of } from "rxjs";
 import { catchError, map, switchMap, tap, withLatestFrom } from "rxjs/operators";
+import { Loan } from "../models/loan";
+import { Rating } from "../models/rating";
 import { AppActionTypes, LoadLoansError, LoadLoansSuccess, ToggleRating } from "./app.actions";
 import { State } from "./app.reducer";
 import * as fromApp from "../store/app.reducer";

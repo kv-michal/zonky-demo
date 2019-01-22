@@ -1,5 +1,6 @@
 import { CurrencyPipe } from "@angular/common";
 import { Pipe, PipeTransform } from '@angular/core';
+import { Loan } from "../../models/loan";
 
 @Pipe({
   name: 'averageAmount'

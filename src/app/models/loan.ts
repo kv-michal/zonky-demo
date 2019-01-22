@@ -1,4 +1,4 @@
-interface Loan {
+export interface Loan {
   topped: boolean;
   amount: number;
   published: boolean;

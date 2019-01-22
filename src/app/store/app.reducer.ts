@@ -1,5 +1,7 @@
 import { HttpErrorResponse } from "@angular/common/http";
 import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { Loan } from "../models/loan";
+import { Rating } from "../models/rating";
 import { AppActions, AppActionTypes } from './app.actions';
 import immutable from 'object-path-immutable';
 

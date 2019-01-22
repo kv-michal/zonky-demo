@@ -1,21 +1,29 @@
+import { CurrencyPipe } from "@angular/common";
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserModule } from "@angular/platform-browser";
+import { AverageAmountPipe } from "../../pipes/average-amount/average-amount.pipe";
 
-import { RatingSelectorComponent } from './rating-selector.component';
+import { AverageLoanComponent } from './average-loan.component';
 
-describe('RatingSelectorComponent', () => {
-  let component: RatingSelectorComponent;
-  let fixture: ComponentFixture<RatingSelectorComponent>;
+describe('AverageLoanComponent', () => {
+  let component: AverageLoanComponent;
+  let fixture: ComponentFixture<AverageLoanComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RatingSelectorComponent ]
+      imports: [],
+      declarations: [AverageLoanComponent, AverageAmountPipe],
+      providers: [CurrencyPipe, AverageAmountPipe]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RatingSelectorComponent);
+    fixture = TestBed.createComponent(AverageLoanComponent);
     component = fixture.componentInstance;
+    component.loading = false;
+    component.loans = [];
+    component.ratings = [];
     fixture.detectChanges();
   });
 

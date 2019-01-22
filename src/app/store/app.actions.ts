@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from "@angular/common/http";
 import { Action } from '@ngrx/store';
+import { Loan } from "../models/loan";
 
 export enum AppActionTypes {
   ToggleRating = '[App] Toggle Rating',

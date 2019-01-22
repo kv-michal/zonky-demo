@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display app-average-loan component', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to zonky-demo!');
+    expect(page.getComponentTitleText()).toEqual('Please select rating');
   });
 
   afterEach(async () => {

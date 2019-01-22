@@ -4,6 +4,8 @@ import { Store } from "@ngrx/store";
 import { Destroy } from "ngx-reactivetoolkit";
 import { combineLatest, Observable } from "rxjs";
 import { takeUntil } from "rxjs/operators";
+import { Loan } from "./models/loan";
+import { Rating } from "./models/rating";
 import { ToggleRating } from "./store/app.actions";
 import * as fromApp from "./store/app.reducer";
 

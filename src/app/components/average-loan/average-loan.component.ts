@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Loan } from "../../models/loan";
+import { Rating } from "../../models/rating";
 
 @Component({
   selector: 'app-average-loan',
